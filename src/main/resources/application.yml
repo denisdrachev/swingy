@@ -1,0 +1,39 @@
+spring:
+  main:
+    banner-mode: log
+  datasource:
+    url: jdbc:h2:mem:tdb;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+game:
+  map:
+    size: 9
+
+#    properties:
+#      javax:
+#        persistence:
+#          schema-generation:
+#            drop-source: metadata
+#            database:
+#              action: drop
+#            drop-script-source: drop-tables.sql
+logging:
+  level:
+    root: ERROR
+#    properties:
+#      javax:
+#        persistence:
+#          schema-generation:
+#            drop-source: script
+#            drop-script-source: drop-tables.sql
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        transaction:
+#          interceptor: TRACE
+
